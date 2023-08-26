@@ -1,0 +1,24 @@
+{
+  "name": "cnlorem",
+  "version": "1.0.1",
+  "description": "A library that generates Chinese lorem ipsum words",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onezhjp/cnlorem.git"
+  },
+  "keywords": [
+    "lorem",
+    "cn",
+    "chinese"
+  ],
+  "author": "onezhjp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onezhjp/cnlorem/issues"
+  },
+  "homepage": "https://github.com/onezhjp/cnlorem#readme"
+}
