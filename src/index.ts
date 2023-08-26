@@ -35,7 +35,7 @@ function dot(hansAfterLastDot, left) {
 }
 
 // 随机生成 n 个汉字
-function lorem(n: number = 50): string {
+function cnlorem(n: number = 50): string {
     let s = '';
     let hansAfterLastDot = 0;
     for (let i = 0; i < n; i++) {
@@ -50,4 +50,4 @@ function lorem(n: number = 50): string {
     return s;
 }
 
-export default lorem;
+export default cnlorem;
