@@ -29,7 +29,7 @@ function one() {
 
 function dot(hansAfterLastDot, left) {
     if (left <= 1) return '。';
-    if (left < 5) return;
+    if (left <= 10) return;
     if (hansAfterLastDot > 5 && Math.random() < 0.1) return random(dots);
     if (hansAfterLastDot > 20) return random(dots);
 }
