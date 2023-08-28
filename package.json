@@ -1,6 +1,6 @@
 {
   "name": "cnlorem",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "A library that generates Chinese lorem ipsum words",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
