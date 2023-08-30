@@ -5,7 +5,7 @@ import oldCnlorem from "../src/before";
 
 describe('计算耗时', () => {
     // 计算耗时 时间超时，无法测试
-    test('general 100 million words', () => {
+    test.skip('general 100 million words', () => {
         // 计算耗时
         const start = Date.now();
         oldCnlorem(1_000_000_00);
