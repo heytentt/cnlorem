@@ -1,4 +1,3 @@
-let seed = Date.now();
 
 // 最常用的 500 个字
 // 占比：50%
@@ -12,12 +11,8 @@ const hans_382_500 = '奇管类未朋且婚台夜青北队久乎越观落尽形�
 
 const dots = ['，', '，', '，', '，', '。', '。', '；', '、']
 
-// XOR-Shift
 function randomInt(max) {
-    seed ^= seed << 13;
-    seed ^= seed >> 17;
-    seed ^= seed << 5;
-    return Math.floor((seed % max + max) % max);
+    return Math.floor(Math.random() * max);
 }
 
 function random(hans) {
@@ -40,22 +35,17 @@ function dot(hansAfterLastDot, left) {
 }
 
 // 随机生成 n 个汉字
-// batchSize: 字符分批生成
-function cnlorem(n: number = 50, batchSize: number = 10): string {
+function cnlorem(n: number = 50): string {
     let s = '';
     let hansAfterLastDot = 0;
-    for (let i = 0; i < n; i += batchSize) {
-        const batch = [];
-        for (let j = 0; j < batchSize; j++) {
-            batch.push(one());
-            hansAfterLastDot++;
-            const d = dot(hansAfterLastDot, n - i - j);
-            if (d) {
-                hansAfterLastDot = 0;
-                batch.push(d);
-            }
+    for (let i = 0; i < n; i++) {
+        s += one();
+        hansAfterLastDot++;
+        const d = dot(hansAfterLastDot, n - i);
+        if (d) {
+            hansAfterLastDot = 0;
+            s += d;
         }
-        s += batch.join('');
     }
     return s;
 }

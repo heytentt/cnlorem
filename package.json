@@ -8,7 +8,9 @@
     "/dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "tsc -p tsconfig.json",
+    "build": "npm run compile",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/onezhjp/cnlorem/issues"
   },
-  "homepage": "https://github.com/onezhjp/cnlorem#readme"
+  "homepage": "https://github.com/onezhjp/cnlorem#readme",
+  "devDependencies": {
+    "vitest": "^0.34.3"
+  }
 }
