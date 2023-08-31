@@ -1,3 +1,5 @@
+import { BATCH_SIZE } from '../util/constant';
+
 let seed = Date.now();
 
 // 最常用的 500 个字
@@ -12,7 +14,6 @@ const hans_382_500 = '奇管类未朋且婚台夜青北队久乎越观落尽形�
 
 const dots = ['，', '，', '，', '，', '。', '。', '；', '、']
 
-// XOR-Shift
 function randomInt(max) {
     seed ^= seed << 13;
     seed ^= seed >> 17;
@@ -40,13 +41,13 @@ function dot(hansAfterLastDot, left) {
 }
 
 // 随机生成 n 个汉字
-// batchSize: 字符分批生成
-function cnlorem(n: number = 50, batchSize: number = 10): string {
+function cnlorem(n: number = 50): string {
     let s = '';
     let hansAfterLastDot = 0;
-    for (let i = 0; i < n; i += batchSize) {
+    for (let i = 0; i < n; i += BATCH_SIZE.DEFAULT_BATCH_SIZE) {
         const batch = [];
-        for (let j = 0; j < batchSize; j++) {
+        const k = i + BATCH_SIZE.DEFAULT_BATCH_SIZE < n ? BATCH_SIZE.DEFAULT_BATCH_SIZE : n - i;
+        for (let j = 0; j < k; j++) {
             batch.push(one());
             hansAfterLastDot++;
             const d = dot(hansAfterLastDot, n - i - j);
