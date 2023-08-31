@@ -1,6 +1,7 @@
 {
   "name": "cnlorem",
   "version": "1.4.5",
+  "type": "module",
   "description": "A library that generates Chinese lorem ipsum words",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,8 +9,7 @@
     "/dist"
   ],
   "scripts": {
-    "compile": "tsc -p tsconfig.json",
-    "build": "npm run compile",
+    "build": "rollup -c",
     "test": "vitest"
   },
   "repository": {
@@ -28,6 +28,10 @@
   },
   "homepage": "https://github.com/onezhjp/cnlorem#readme",
   "devDependencies": {
+    "rollup": "^3.28.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "typescript": "^5.2.2",
     "vitest": "^0.34.3"
   }
 }
