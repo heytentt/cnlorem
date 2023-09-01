@@ -1,5 +1,5 @@
 import { describe, test } from 'vitest';
-import cnlorem from "../src/index";
+import cnlorem from "../index";
 
 
 describe('计算耗时', () => {

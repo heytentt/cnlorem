@@ -1,4 +1,4 @@
-import { BATCH_SIZE } from '../util/constant';
+import { BATCH_SIZE } from './util/constant';
 
 let seed = Date.now();
 
@@ -45,7 +45,7 @@ function cnlorem(n: number = 50): string {
     let s = '';
     let hansAfterLastDot = 0;
     for (let i = 0; i < n; i += BATCH_SIZE.DEFAULT_BATCH_SIZE) {
-        const batch = [];
+        const batch: string[] = [];
         const k = i + BATCH_SIZE.DEFAULT_BATCH_SIZE < n ? BATCH_SIZE.DEFAULT_BATCH_SIZE : n - i;
         for (let j = 0; j < k; j++) {
             batch.push(one());
