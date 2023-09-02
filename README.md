@@ -16,7 +16,7 @@ console.log(cnlorem(50))
 // Output: 着打相听里平很影命美终。眼把正么斯回条过身位活水意一位告回队大片间，儿看住里口处家成，两同风流民马稜她和和。
 
 console.log(cnlorem({n: 50, en: 3}))
-// Output: 使发tempor德示点把来发头爱于，能reprehenderit长年年女答Duis意以又。方些现给物任总，水发成世未发选。化是计并从面行火长使法过与妈在之。
+// Output: 出心此然长无 dolor 该接将，认不那中行约经身死她者身方决头无论此此只着之 culpa，其望然亲同后。此经用独到 eu 内，文识次信量神都。
 ```
 
 ## TODO
