@@ -1,6 +1,6 @@
 # cnlorem
 
-cnlorem 是一个随机生成中文段落（包含文字和标点）的 Javascript/Typescript 库
+cnlorem 是一个随机生成中英文句子（包含汉字、英文单词、标点）的 Javascript/Typescript 库
 
 ## Installation
 ```bash
