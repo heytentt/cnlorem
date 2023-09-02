@@ -19,7 +19,11 @@
   "keywords": [
     "lorem",
     "cn",
-    "chinese"
+    "chinese",
+    "中文",
+    "汉字",
+    "中英",
+    "中英混排"
   ],
   "author": "onezhjp",
   "license": "MIT",
