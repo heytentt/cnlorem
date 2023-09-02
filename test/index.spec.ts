@@ -41,6 +41,6 @@ describe('计算耗时', () => {
     })
 
     test('cn+en', () => {
-        console.log(cnlorem({n: 50, en: 3}))
+        console.log(cnlorem({n: 50, en: 300}))
     })
 })

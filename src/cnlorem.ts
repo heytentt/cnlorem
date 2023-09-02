@@ -64,7 +64,8 @@ function join_symbols(words: Symbol[]): string {
         if(
             last == SymbolType.En && cur == SymbolType.En ||
             last == SymbolType.En && cur == SymbolType.Han ||
-            last == SymbolType.Han && cur == SymbolType.En 
+            last == SymbolType.Han && cur == SymbolType.En ||
+            last == SymbolType.EnPunc
         ) s += ' ';
         s += words[i].val;
     }
