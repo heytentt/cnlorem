@@ -1,6 +1,7 @@
-import { BATCH_SIZE } from './util/constant';
+export enum BATCH_SIZE {
+    DEFAULT_BATCH_SIZE = 10, // 默认一个循环间隔批量生成汉字的数量
+}
 
-let seed = Date.now();
 
 // 最常用的 500 个字
 // 占比：50%
@@ -12,53 +13,9 @@ const hans_233_380 = '更拉东神记处让母父应直字场平报友关放至�
 // 占比：5%
 const hans_382_500 = '奇管类未朋且婚台夜青北队久乎越观落尽形影红爸百令周吧识步希亚术留市半热送兴造谈容极随演收首根讲整式取照办强石古华諣拿计您装似足双妻尼转诉米称丽客南领节衣站黑刻统断福城故历惊脸选包紧争另建维绝树系伤示愿持千史谁准联妇纪基买志静阿诗独复痛消社算';
 
-const dots = ['，', '，', '，', '，', '。', '。', '；', '、']
+const en_words = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit', 'sed', 'do', 'eiusmod', 'tempor', 'incididunt', 'ut', 'labore', 'et', 'dolore', 'magna', 'aliqua', 'Ut', 'enim', 'ad', 'minim', 'veniam', 'quis', 'nostrud', 'exercitation', 'ullamco', 'laboris', 'nisi', 'ut', 'aliquip', 'ex', 'ea', 'commodo', 'consequat', 'Duis', 'aute', 'irure', 'dolor', 'in', 'reprehenderit', 'in', 'voluptate', 'velit', 'esse', 'cillum', 'dolore', 'eu', 'fugiat', 'nulla', 'pariatur', 'Excepteur', 'sint', 'occaecat', 'cupidatat', 'non', 'proident', 'sunt', 'in', 'culpa', 'qui', 'officia', 'deserunt', 'mollit', 'anim', 'id', 'est', 'laborum'];
 
-function randomInt(max) {
-    seed ^= seed << 13;
-    seed ^= seed >> 17;
-    seed ^= seed << 5;
-    return Math.floor((seed % max + max) % max);
-}
+const cn_puncs = ['，', '，', '，', '。']
+const en_puncs = [',', ',', ',', '.'];
 
-function random(hans) {
-    return hans[randomInt(hans.length)];
-}
-
-function one() {
-    const r = randomInt(75);
-    if (r < 50) return random(hans_140);
-    if (r < 60) return random(hans_141_232);
-    if (r < 70) return random(hans_233_380);
-    return random(hans_382_500);
-}
-
-function dot(hansAfterLastDot, left) {
-    if (left <= 1) return '。';
-    if (left <= 10) return;
-    if (hansAfterLastDot > 5 && Math.random() < 0.1) return random(dots);
-    if (hansAfterLastDot > 20) return random(dots);
-}
-
-// 随机生成 n 个汉字
-function cnlorem(n: number = 50): string {
-    let s = '';
-    let hansAfterLastDot = 0;
-    for (let i = 0; i < n; i += BATCH_SIZE.DEFAULT_BATCH_SIZE) {
-        const batch: string[] = [];
-        const k = i + BATCH_SIZE.DEFAULT_BATCH_SIZE < n ? BATCH_SIZE.DEFAULT_BATCH_SIZE : n - i;
-        for (let j = 0; j < k; j++) {
-            batch.push(one());
-            hansAfterLastDot++;
-            const d = dot(hansAfterLastDot, n - i - j);
-            if (d) {
-                hansAfterLastDot = 0;
-                batch.push(d);
-            }
-        }
-        s += batch.join('');
-    }
-    return s;
-}
-
-export default cnlorem;
+export { hans_140, hans_141_232, hans_233_380, hans_382_500, en_words, cn_puncs, en_puncs };

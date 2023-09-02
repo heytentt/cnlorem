@@ -13,8 +13,15 @@ npm i --save-dev cnlorem
 import cnlorem from 'cnlorem'
 
 console.log(cnlorem(50))
-// Output: 后成便现起常要德在个：公气主感斯工通。得当表下斯总望动界人己候建：手高所年日次諣第与。因能球罗海难只：会只得高。
+// Output: 着打相听里平很影命美终。眼把正么斯回条过身位活水意一位告回队大片间，儿看住里口处家成，两同风流民马稜她和和。
+
+console.log(cnlorem({n: 50, en: 3}))
+// Output: 使发tempor德示点把来发头爱于，能reprehenderit长年年女答Duis意以又。方些现给物任总，水发成世未发选。化是计并从面行火长使法过与妈在之。
 ```
+
+## TODO
+
+- [x] 支持生成中英混排文本
 
 
 ## References

@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/onezhjp/cnlorem#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4",
     "rollup": "^3.28.1",
-    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-typescript2": "^0.35.0",
     "typescript": "^5.2.2",
     "vitest": "^0.34.3"

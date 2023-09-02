@@ -1,3 +1,3 @@
-import cnlorem from './src/index';
+import { cnlorem } from "./src/cnlorem";
 
 export default cnlorem;

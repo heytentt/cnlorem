@@ -35,4 +35,12 @@ describe('计算耗时', () => {
         const end = Date.now();
         console.log(`cnlorem(1_000_000_00) 耗时：${end - start}ms`);
     })
+
+    test('cnlorem(20)', () => {
+        console.log(cnlorem(20))
+    })
+
+    test('cn+en', () => {
+        console.log(cnlorem({n: 50, en: 3}))
+    })
 })
