@@ -15,7 +15,7 @@ const hans_382_500 = '奇管类未朋且婚台夜青北队久乎越观落尽形�
 
 const en_words = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit', 'sed', 'do', 'eiusmod', 'tempor', 'incididunt', 'ut', 'labore', 'et', 'dolore', 'magna', 'aliqua', 'Ut', 'enim', 'ad', 'minim', 'veniam', 'quis', 'nostrud', 'exercitation', 'ullamco', 'laboris', 'nisi', 'ut', 'aliquip', 'ex', 'ea', 'commodo', 'consequat', 'Duis', 'aute', 'irure', 'dolor', 'in', 'reprehenderit', 'in', 'voluptate', 'velit', 'esse', 'cillum', 'dolore', 'eu', 'fugiat', 'nulla', 'pariatur', 'Excepteur', 'sint', 'occaecat', 'cupidatat', 'non', 'proident', 'sunt', 'in', 'culpa', 'qui', 'officia', 'deserunt', 'mollit', 'anim', 'id', 'est', 'laborum'];
 
-const cn_puncs = ['，', '，', '，', '。']
+const han_puncs = ['，', '，', '，', '。']
 const en_puncs = [',', ',', ',', '.'];
 
-export { hans_140, hans_141_232, hans_233_380, hans_382_500, en_words, cn_puncs, en_puncs };
+export { hans_140, hans_141_232, hans_233_380, hans_382_500, en_words, han_puncs, en_puncs };
